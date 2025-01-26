@@ -1,4 +1,4 @@
-<h1>Gallery</h1>
+<h1 id="gallery">Gallery</h1>
 @for(picture of pictures; track picture.id){ 
   @defer {
     <app-picture-frame [picture]="picture.src" [imgHeight]="500"></app-picture-frame>

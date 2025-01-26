@@ -1,20 +1,6 @@
 
-@if (windowWidth < 600){
-  <div class="button-container">
-    <button mat-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-      @for (link of links; track link.url){
-        <button mat-menu-item routerLink="/{{link.url}}">{{link.name}}</button>
-      }
-    </mat-menu>
-  </div>
-}
-@else {
-  <div class="link-container">
-    @for (link of links; track link.url){
-      <a routerLink="/{{link.url}}">{{link.name}}</a>
-    }
-  </div>
-}
+<div class="link-container">
+  @for (link of links; track link.url){
+    <a routerLink="/{{link.url}}">{{link.name}}</a>
+  }
+</div>

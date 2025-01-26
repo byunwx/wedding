@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-top-bar',
@@ -10,13 +9,12 @@ import { MatIcon } from '@angular/material/icon';
     CommonModule, 
     RouterModule,
     MatMenuModule,
-    MatIcon
   ],
   standalone: true,
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.scss'
 })
-export class TopBarComponent implements OnInit {
+export class TopBarComponent {
   windowWidth!: number;
   links = [
     {
@@ -35,14 +33,5 @@ export class TopBarComponent implements OnInit {
       name: 'Contact',
       url: 'contact'
     }
-  ]
-  constructor() { }
-
-  ngOnInit() {
-    this.windowWidth = window.innerWidth;
-    console.log(this.windowWidth);
-  }
-
-
-    
+  ]    
 }
