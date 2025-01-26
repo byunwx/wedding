@@ -8,7 +8,14 @@ import { PictureFrameComponent } from '../../components/picture-frame/picture-fr
   styleUrl: './gallery.component.scss'
 })
 export class GalleryComponent {
-  public pictures = [
+  public pictures: [{
+    id: number;
+    src: string;
+  }] = [
+        {
+      id: 1,
+      src: 'loadingpicture.jpg',
+    },
     // {
     //   id: 1,
     //   src: '001.jpg',
