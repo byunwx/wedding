@@ -9,26 +9,26 @@ import { PictureFrameComponent } from '../../components/picture-frame/picture-fr
 })
 export class GalleryComponent {
   public pictures = [
-    {
-      id: 1,
-      src: '001.jpg',
-    },
-    {
-      id: 2,
-      src: '002.jpg',
-    },
-    {
-      id: 3,
-      src: '003.jpg',
-    },
-    {
-      id: 4,
-      src: '004.jpg',
-    },
-    {
-      id: 5,
-      src: '005.jpg',
-    },
+    // {
+    //   id: 1,
+    //   src: '001.jpg',
+    // },
+    // {
+    //   id: 2,
+    //   src: '002.jpg',
+    // },
+    // {
+    //   id: 3,
+    //   src: '003.jpg',
+    // },
+    // {
+    //   id: 4,
+    //   src: '004.jpg',
+    // },
+    // {
+    //   id: 5,
+    //   src: '005.jpg',
+    // },
     // {
     //   id: 6,
     //   src: '006.jpg',
