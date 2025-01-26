@@ -1,0 +1,17 @@
+.button-container {
+  width: 80%;
+  justify-items: right;
+}
+
+.link-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: pink;
+    }
+  }
+}

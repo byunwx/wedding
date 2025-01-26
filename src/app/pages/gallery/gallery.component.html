@@ -1,0 +1,11 @@
+<h1>Gallery</h1>
+@for(picture of pictures; track picture.id){ 
+  @defer {
+    <app-picture-frame [picture]="picture.src" [imgHeight]="500"></app-picture-frame>
+  } @placeholder {
+    <app-picture-frame picture="loadingpicture.jpg" [imgHeight]="500"></app-picture-frame>
+  } @loading {
+    <app-picture-frame picture="loadingpicture.jpg" [imgHeight]="500"></app-picture-frame>
+  }
+  <br>
+}

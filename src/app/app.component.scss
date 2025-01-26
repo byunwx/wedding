@@ -1,0 +1,28 @@
+
+  /* Top Bar */
+  
+  app-top-bar {
+    height: 30px;
+    background-color: rgba(93, 36, 12, 0.758);
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+  }
+  
+  .body-container {
+    justify-self: center;
+    text-align: center;
+    width: 80%;
+    padding:   16px;
+    overflow: hidden;
+  }
+
+  
+  /*
+  Copyright Google LLC. All Rights Reserved.
+  Use of this source code is governed by an MIT-style license that
+  can be found in the LICENSE file at https://angular.io/license
+  */
