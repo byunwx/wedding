@@ -29,34 +29,34 @@ export class GalleryComponent {
       id: 5,
       src: '005.jpg',
     },
-    {
-      id: 6,
-      src: '006.jpg',
-    },
-    {
-      id: 8,
-      src: '008.jpg',
-    },
-    {
-      id: 9,
-      src: '009.jpg',
-    },
-    {
-      id: 10,
-      src: '010.jpg',
-    },
-    {
-      id: 11,
-      src: '011.jpg',
-    },
-    {
-      id: 12,
-      src: '012.jpg',
-    },
-    {
-      id: 13,
-      src: '013.jpg',
-    },
+    // {
+    //   id: 6,
+    //   src: '006.jpg',
+    // },
+    // {
+    //   id: 8,
+    //   src: '008.jpg',
+    // },
+    // {
+    //   id: 9,
+    //   src: '009.jpg',
+    // },
+    // {
+    //   id: 10,
+    //   src: '010.jpg',
+    // },
+    // {
+    //   id: 11,
+    //   src: '011.jpg',
+    // },
+    // {
+    //   id: 12,
+    //   src: '012.jpg',
+    // },
+    // {
+    //   id: 13,
+    //   src: '013.jpg',
+    // },
     {
       id: 14,
       src: '014.jpg',
