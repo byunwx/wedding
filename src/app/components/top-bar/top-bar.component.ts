@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-top-bar',
@@ -9,17 +10,18 @@ import { MatMenuModule } from '@angular/material/menu';
     CommonModule, 
     RouterModule,
     MatMenuModule,
+    MatIcon
   ],
   standalone: true,
   templateUrl: './top-bar.component.html',
   styleUrl: './top-bar.component.scss'
 })
-export class TopBarComponent {
+export class TopBarComponent implements OnInit {
   windowWidth!: number;
   links = [
     {
       name: 'Home',
-      url: ''
+      url: 'home'
     },
     {
       name: 'RSVP',
@@ -33,5 +35,16 @@ export class TopBarComponent {
       name: 'Contact',
       url: 'contact'
     }
-  ]    
+  ]
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    this.windowWidth = window.innerWidth;
+  }
+
+  navigateToFragment(fragment: string) {
+    console.log(fragment);
+    this.router.navigate(['#'+fragment]);
+  }
+
 }

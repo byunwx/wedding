@@ -4,7 +4,32 @@ html, body { height: 100%; }
 body { 
   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
   background-color: bisque;
+
+    app-top-bar {
+    height: 30px;
+    background-color: rgba(93, 36, 12, 0.758);
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+
+      position: fixed;
+      top: 0; /* Adjust this value if you need spacing from the top */
+      z-index: 1000; /* Makes sure it stays on top of other elements */
+      box-shadow: 0 4px 2px -2px gray; /* Optional, adds shadow for better visibility */
+      padding: 10px; /* Optional, for spacing around content */
+      width: 100vw;
+    
+  }
 }
 h1 {
   font-family: cursive;
+}
+.page {
+  min-height: 100vh;
+  &:first-child {
+    padding-top: 60px;
+  }
 }
