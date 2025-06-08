@@ -24,16 +24,16 @@ export class TopBarComponent implements OnInit {
       url: 'home'
     },
     {
-      name: 'RSVP',
-      url: 'rsvp'
+      name: 'Our Story',
+      url: 'our-story'
     },
     {
       name: 'Gallery',
       url: 'gallery'
     },
     {
-      name: 'Contact',
-      url: 'contact'
+      name: 'Gift Registry',
+      url: 'gift-registry'
     }
   ]
   constructor(private router: Router) { }
@@ -42,9 +42,5 @@ export class TopBarComponent implements OnInit {
     this.windowWidth = window.innerWidth;
   }
 
-  navigateToFragment(fragment: string) {
-    console.log(fragment);
-    this.router.navigate(['#'+fragment]);
-  }
 
 }

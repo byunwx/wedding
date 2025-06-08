@@ -1,0 +1,19 @@
+.disabled-link {
+  pointer-events: none;     /* disables click */
+  color: #aaa;              /* gray text */
+  background-color: #e5e7eb; /* light gray bg */
+  cursor: not-allowed;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.highlight-info {
+  background-color: #fffbe6; /* soft yellow */
+  border: 1px solid #facc15; /* golden border */
+  padding: 1rem;
+  margin: 0.5rem auto;
+  display: inline-block;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #92400e; /* warm brown for visibility */
+}
