@@ -17,8 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/wedding2025/",
             "outputPath": "dist/wedding",
-            "index": "src/index.html",
+            "index": "src/ind sex.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
