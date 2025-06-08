@@ -1,21 +1,22 @@
-
-  <div *ngIf="windowWidth < 600; else desktopNav">
-    <div class="mobile-nav link-container">
-      <a href="#welcome" title="Home">🏠</a>
-      <a href="#our-story" title="Our Story">💑</a>
-      <a href="#gallery" title="Gallery">📸</a>
-      <a href="#gift-registry" title="Gift Registry">🎁</a>
-      <a href="https://withjoy.com/lindsay-and-woojoo" class="venue-button" title="View Venue Details">💒</a>
-    </div>
-  </div>
-  <ng-template #desktopNav>
-    <div class="desktop-nav link-container">
-      <a href="#welcome">Home</a>
-      <a href="#our-story">Our Story</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#gift-registry">Gift Registry</a>
-      <a href="https://withjoy.com/lindsay-and-woojoo" target="_blank" class="venue-button">
-        Venue
-      </a>
-    </div>
-  </ng-template>
+<div class="top-nav link-container">
+  <a href="#welcome" title="Home">
+    <span class="icon">🏠</span>
+    <span class="label">Home</span>
+  </a>
+  <a href="#our-story" title="Our Story">
+    <span class="icon">💑</span>
+    <span class="label">Our Story</span>
+  </a>
+  <a href="#gallery" title="Gallery">
+    <span class="icon">📸</span>
+    <span class="label">Gallery</span>
+  </a>
+  <a href="#gift-registry" title="Gift Registry">
+    <span class="icon">🎁</span>
+    <span class="label">Gift Registry</span>
+  </a>
+  <a href="https://withjoy.com/lindsay-and-woojoo" class="venue-button" title="View Venue Details">
+    <span class="icon">💒</span>
+    <span class="label">Venue</span>
+  </a>
+</div>

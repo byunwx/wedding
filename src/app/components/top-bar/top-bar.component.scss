@@ -1,78 +1,156 @@
-.button-container {
-  width: 80%;
-  justify-items: right;
-}
-
-.link-container {
-  width: 80%;
+.top-nav {
+    width: 80%;
   display: flex;
   justify-content: space-around;
-  a {
-    color: white;
-    text-decoration: none;
-    &:hover {
-      color: pink;
-    }
-  }
-}
-
-.mobile-nav {
-  display: flex;
-  gap: 2rem;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
   a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.6rem;
     text-decoration: none;
-    color: #333;
+    color: white;
     transition: transform 0.2s;
 
     &:hover {
-      transform: scale(1.2);
+      transform: scale(1.1);
+      color: #e91e63;
+    }
+
+    .icon {
+      display: inline;
+    }
+
+    .label {
+      display: none;
+      font-weight: 500;
+    }
+  }
+  .venue-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #fce8f0;
+    color: #b03060;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+    line-height: 1; // prevents altering line spacing
+
+    &:hover {
+      background-color: #ffe4f1;
+      color: #a02050;
+      transform: scale(1.05);
+    }
+  }
+
+
+
+  @media (min-width: 600px) {
+    a {
+      flex-direction: row;
+      gap: 2rem;
+      // padding: 1rem 0;
+      font-size: 1rem;
+
+      .icon {
+        display: none;
+      }
+
+      .label {
+        display: inline;
+      }
+    }
+    .venue-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      background-color: #fce8f0;
+      color: #b03060 !important;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+
+      transition: all 0.3s ease;
+      line-height: 1; // prevents altering line spacing
+
+      &:hover {
+        background-color: #ffe4f1;
+        color: #a02050;
+        transform: scale(1.05);
+      }
     }
   }
 }
 
-.venue-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+// .mobile-nav {
+//   display: flex;
+//   gap: 2rem;
+//   padding: 1rem 0;
+//   position: sticky;
+//   top: 0;
+//   z-index: 1000;
+//   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 
-  background-color: #fce8f0;
-  color: #b03060 !important;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
+//   a {
+//     font-size: 1.6rem;
+//     text-decoration: none;
+//     color: #333;
+//     transition: transform 0.2s;
 
-  transition: all 0.3s ease;
-  line-height: 1; // prevents altering line spacing
+//     &:hover {
+//       transform: scale(1.2);
+//     }
+//   }
+// }
 
-  &:hover {
-    background-color: #ffe4f1;
-    color: #a02050;
-    transform: scale(1.05);
-  }
-}
+// .venue-button {
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
 
-.mobile-nav .venue-button {
-  display: flex;
-  background-color: #fce8f0;
-  font-size: 1.6rem;
-  text-decoration: none;
-  line-height: 1;
-  color: #b03060;
-  transition: transform 0.2s ease-in-out;
+//   background-color: #fce8f0;
+//   color: #b03060 !important;
+//   border: none;
+//   padding: 0.5rem 1rem;
+//   border-radius: 999px;
+//   font-weight: 600;
+//   font-size: 1rem;
+//   text-decoration: none;
 
-  &:hover {
-    transform: scale(1.2);
-    background-color: #ffe4f1;
-  }
-}
+//   transition: all 0.3s ease;
+//   line-height: 1; // prevents altering line spacing
+
+//   &:hover {
+//     background-color: #ffe4f1;
+//     color: #a02050;
+//     transform: scale(1.05);
+//   }
+// }
+
+// .mobile-nav .venue-button {
+//   display: flex;
+//   background-color: #fce8f0;
+//   font-size: 1.6rem;
+//   text-decoration: none;
+//   line-height: 1;
+//   color: #b03060;
+//   transition: transform 0.2s ease-in-out;
+
+//   &:hover {
+//     transform: scale(1.2);
+//     background-color: #ffe4f1;
+//   }
+// }
