@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedding": {
+    "wedding2025": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,8 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/wedding2025/",
-            "outputPath": "dist/wedding",
+            "outputPath": "dist/wedding2025",
             "index": "src/ind sex.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -66,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wedding:build:production"
+              "buildTarget": "wedding2025:build:production"
             },
             "development": {
-              "buildTarget": "wedding:build:development"
+              "buildTarget": "wedding2025:build:development"
             }
           },
           "defaultConfiguration": "development"
