@@ -1,6 +1,17 @@
 
-  <div class="link-container">
-    @for (link of links; track link.url){
-      <a href="#{{link.url}}">{{link.name}}</a>
-    }
+  <div *ngIf="windowWidth < 600; else desktopNav">
+    <div class="mobile-nav link-container">
+      <a href="#welcome" title="Home">🏠</a>
+      <a href="#our-story" title="Our Story">💑</a>
+      <a href="#gallery" title="Gallery">📸</a>
+      <a href="#gift-registry" title="Gift Registry">🎁</a>
+    </div>
   </div>
+  <ng-template #desktopNav>
+    <div class="desktop-nav link-container">
+      <a href="#welcome">Home</a>
+      <a href="#our-story">Our Story</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#gift-registry">Gift Registry</a>
+    </div>
+  </ng-template>

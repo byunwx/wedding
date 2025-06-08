@@ -19,7 +19,7 @@ export class TopBarComponent implements OnInit {
   links = [
     {
       name: 'Home',
-      url: 'home'
+      url: 'welcome'
     },
     {
       name: 'Our Story',
