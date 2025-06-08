@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wedding2025": {
+    "wedding": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/wedding2025",
+            "outputPath": "dist/wedding",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -32,11 +32,9 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/rose-red.css",
               "src/styles.scss"
             ],
-            "scripts": [],
-            "baseHref": "/wedding2025/"
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -66,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "wedding2025:build:production"
+              "buildTarget": "wedding:build:production"
             },
             "development": {
-              "buildTarget": "wedding2025:build:development"
+              "buildTarget": "wedding:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,14 +91,10 @@
               }
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/rose-red.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
-        },
-        "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
