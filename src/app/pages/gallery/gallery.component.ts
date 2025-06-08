@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NgImageSliderModule } from 'ng-image-slider';
 
 @Component({
@@ -8,7 +8,7 @@ import { NgImageSliderModule } from 'ng-image-slider';
   styleUrl: './gallery.component.scss'
 })
 
-export class GalleryComponent {
+export class GalleryComponent implements OnInit {
   public imageObject = [
     {
       image: '001.jpg',
@@ -118,11 +118,48 @@ export class GalleryComponent {
       alt: 'Album page 19',
       title: 'Album page 19'
     }
-       
   ];
+
+  public firstImageOject = this.imageObject.slice(0, 9);
+  public secondImageOject = this.imageObject.slice(9);
+
   public imageSize = {
     width: '100%',
     height: '80%',
   };
+
+  windowWidth!: number;
+
+  @HostListener('window:resize', ['$event'])
+
+  ngOnInit() {
+    this.windowWidth = window.innerWidth;
+    this.updateImageHeight();
+  }
+
+  onResize(event: any) {
+    this.windowWidth = event.target.innerWidth;
+    this.updateImageHeight();
+  }
+
+  updateImageHeight() {
+    if (this.windowWidth < 600) {
+      this.imageSize = {
+        width: '100%',
+        height: '30%',
+      };
+    } else if (this.windowWidth < 768) {
+      this.imageSize = {
+        width: '100%',
+        height: '50%',
+      };
+    } else {
+      this.imageSize = {
+        width: '100%',
+        height: '80%',
+      };
+    }
+  }
+
   
 }

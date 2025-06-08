@@ -1,4 +1,12 @@
 <div id='gallery' class="page">
   <h1>Gallery</h1>
-  <ng-image-slider [images]="imageObject" [manageImageRatio]="true" [infinite]="true" [imageSize]="imageSize" [lazyLoading]="true"></ng-image-slider>
+  @if(windowWidth < 600) {
+    <h3 class="gallery-section-title">✨ Gallery – Part 1</h3>
+    <ng-image-slider [images]="firstImageOject" [manageImageRatio]="true" [infinite]="true" [imageSize]="imageSize" [lazyLoading]="true"></ng-image-slider>
+
+    <h3 class="gallery-section-title">📸 Gallery – Part 2</h3>
+    <ng-image-slider [images]="secondImageOject" [manageImageRatio]="true" [infinite]="true" [imageSize]="imageSize" [lazyLoading]="true"></ng-image-slider>
+  }  @else {
+    <ng-image-slider [images]="imageObject" [manageImageRatio]="true" [infinite]="true" [imageSize]="imageSize" [lazyLoading]="true"></ng-image-slider>
+  } 
 </div>
