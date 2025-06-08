@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-top-bar',
@@ -10,7 +9,6 @@ import { MatIcon } from '@angular/material/icon';
     CommonModule, 
     RouterModule,
     MatMenuModule,
-    MatIcon
   ],
   standalone: true,
   templateUrl: './top-bar.component.html',
