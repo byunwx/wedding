@@ -123,35 +123,35 @@ export class GalleryComponent implements OnInit {
   public firstImageOject = this.imageObject.slice(0, 9);
   public secondImageOject = this.imageObject.slice(9);
 
-  public imageSize = {
+  public imageSize : {width: string, height?: string} = {
     width: '100%',
     height: '80%',
   };
 
   windowWidth!: number;
 
-  @HostListener('window:resize', ['$event'])
-
   ngOnInit() {
     this.windowWidth = window.innerWidth;
     this.updateImageHeight();
   }
 
+  @HostListener('window:resize', ['$event'])
+  // Listen for window resize events
   onResize(event: any) {
     this.windowWidth = event.target.innerWidth;
     this.updateImageHeight();
   }
 
   updateImageHeight() {
-    if (this.windowWidth < 1200) {
+    if (this.windowWidth < 650) {
       this.imageSize = {
         width: '100%',
         height: '30%',
       };
-    } else {
+    }  else {
       this.imageSize = {
         width: '100%',
-        height: '80%',
+        height: this.windowWidth/3 +'px',
       };
     }
   }
