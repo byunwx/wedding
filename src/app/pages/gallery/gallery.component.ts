@@ -143,15 +143,10 @@ export class GalleryComponent implements OnInit {
   }
 
   updateImageHeight() {
-    if (this.windowWidth < 600) {
+    if (this.windowWidth < 1200) {
       this.imageSize = {
         width: '100%',
         height: '30%',
-      };
-    } else if (this.windowWidth < 768) {
-      this.imageSize = {
-        width: '100%',
-        height: '50%',
       };
     } else {
       this.imageSize = {
